@@ -1,0 +1,1 @@
+使用opencv和fastapi写的简单滑块识别接口
