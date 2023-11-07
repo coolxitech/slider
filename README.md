@@ -1,7 +1,8 @@
 使用opencv和fastapi写的简单滑块识别接口
 
 代码来源于[SliderCrack](https://github.com/crazyxw/SlideCrack),感谢作者的开源精神
-使用fastapi编写HTTP接口，使用uvicorn启动服务
+
+使用fastapi编写HTTP接口，uvicorn启动Web服务
 
 # 接口说明
 使用方法：
