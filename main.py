@@ -90,17 +90,11 @@ async def index():
 @app.post("/slider")
 def slider(json_data: dict = Body(...)):
     # 处理滑块请求路由
-    slider_image = json_data.get("sliderimage")
-    bg_image = json_data.get("bgimage")
-    print(slider_image)
-    if slider_image is None or bg_image is None:
-        return {'code': 1, 'msg': '缺少参数'}
-    elif slider_image == '' or bg_image == '':
-        return {'code': 1,'msg': '参数为空'}
+
     # 从json数据中获取滑块图片
-    image1 = convert_base64_to_file(slider_image)
+    image1 = convert_base64_to_file(json_data.get("sliderimage"))
     # 从json数据中获取背景图片
-    image2 = convert_base64_to_file(slider_image)
+    image2 = convert_base64_to_file(json_data.get("bgimage"))
 
     # 创建滑块识别对象
     sc = SlideCrack(image1, image2)
